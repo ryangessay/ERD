@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <title>Event Registration Database</title>
+
+        <!-- CSS Styles -->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <div class="parent">
+            <div>
+                <button type="submit" id="connect-wallet">Connect Wallet</button>
+                <button id="get-info-button">Get My Registration Info</button>
+                <div id="attendee-info"></div>
+                <div>
+                    <h1 class="larger-heading">Event Registration Database</h1>
+                    
+                        <form onsubmit="return validateForm()">
+                            <!-- First and Last Name -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name:</label><br>
+                                    <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                                </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name:</label><br>
+                                <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+                                </div>
+                            </div>
+
+                            <!-- Email Address -->
+                            <div class="form-row">
+                                <div>
+                                <label for="email">Email Address:</label><br>
+                                <input type="text" id="email" name="email" placeholder="Email Address">
+                                </div>
+                            </div>
+
+                            <!-- Ticket Types -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="radio" id="regular" name="ticketType" value="0">
+                                    <label for="regular">Regular Ticket</label>
+                                    <input type="radio" id="vip" name="ticketType" value="1">
+                                    <label for="vip">VIP Ticket</label>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <br>
+                            <div class="form-row">
+                                <button type="submit" id='submit-button' class="submit-button">Submit</button>
+                            </div>
+
+                        </form>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Node.js -->
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+
+        <!-- Web3 was 1.6.0-->
+        <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+
+        <!-- Script JS -->
+        <script src="script.js"></script>
+
+        <!-- App JS-->
+        <script src="app.js"></script>
+
+          
+        </script>
+    </body>
+</html>

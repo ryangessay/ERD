@@ -1,0 +1,61 @@
+body {
+    background-image: url('music.jpg');
+    background-size: cover; /* Adjust the image size to cover the entire viewport */
+    background-position: center; /* Center the image on the viewport */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    color: whitesmoke; /*Set text to whitesmoke */
+    height: 100vh; /* Set background image to take up entire screen */
+    overflow: hidden; /* Get rid of spacebar */
+}
+
+label {
+    font-size: 16px; 
+    text-shadow: 2px 2px 4px #000;
+}
+
+form {
+    text-align: center;
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65vh;
+}
+
+.larger-heading {
+    font-size: 62px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+}
+
+.form-group {
+    margin: 20px;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+.submit-button {
+    background-color: #000000;
+    color: white;
+    padding: 13px 23px;
+    font-size: 16px;
+    border: none; 
+    cursor: pointer; 
+}
+
+.submit-button:hover {
+    background-color: #006ae3;
+}
+
+.connect-wallet {
+    right: 50px;
+}

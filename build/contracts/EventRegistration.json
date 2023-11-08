@@ -1,0 +1,3673 @@
+{
+  "contractName": "EventRegistration",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_firstName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_lastName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_email",
+          "type": "string"
+        },
+        {
+          "internalType": "enum EventRegistration.TicketType",
+          "name": "_ticketType",
+          "type": "uint8"
+        }
+      ],
+      "name": "register",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAttendeeInfo",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "firstName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "lastName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "ticketType",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getAttendeeInfo\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"firstName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"lastName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"ticketType\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_firstName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_lastName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_email\",\"type\":\"string\"},{\"internalType\":\"enum EventRegistration.TicketType\",\"name\":\"_ticketType\",\"type\":\"uint8\"}],\"name\":\"register\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/EventRegistration.sol\":\"EventRegistration\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/EventRegistration.sol\":{\"keccak256\":\"0x0a6f2940435ce649c418e7dd414308ab0300b4fa64c60dae678a448f5e710f42\",\"urls\":[\"bzz-raw://47cc53354f3d945d3261a94cea5cfb1c55d633ac41fe30d2da8fde7d6edac942\",\"dweb:/ipfs/QmQDAksHqPuvAXBZoA887nKKb2WwJsG7eiHK9MJUMVHgd1\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610a4c806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063796ed3391461003b5780637bd8a878146101f6575b600080fd5b6101f46004803603608081101561005157600080fd5b81019060208101813564010000000081111561006c57600080fd5b82018360208201111561007e57600080fd5b803590602001918460018302840111640100000000831117156100a057600080fd5b91908080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525092959493602081019350359150506401000000008111156100f357600080fd5b82018360208201111561010557600080fd5b8035906020019184600183028401116401000000008311171561012757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929594936020810193503591505064010000000081111561017a57600080fd5b82018360208201111561018c57600080fd5b803590602001918460018302840111640100000000831117156101ae57600080fd5b91908080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152509295505050903560ff1691506103a89050565b005b6101fe61054c565b6040518080602001806020018060200180602001858103855289818151815260200191508051906020019080838360005b8381101561024757818101518382015260200161022f565b50505050905090810190601f1680156102745780820380516001836020036101000a031916815260200191505b5085810384528851815288516020918201918a019080838360005b838110156102a757818101518382015260200161028f565b50505050905090810190601f1680156102d45780820380516001836020036101000a031916815260200191505b50858103835287518152875160209182019189019080838360005b838110156103075781810151838201526020016102ef565b50505050905090810190601f1680156103345780820380516001836020036101000a031916815260200191505b50858103825286518152865160209182019188019080838360005b8381101561036757818101518382015260200161034f565b50505050905090810190601f1680156103945780820380516001836020036101000a031916815260200191505b509850505050505050505060405180910390f35b60008451116103f7576040805162461bcd60e51b8152602060048201526016602482015275119a5c9cdd081b985b59481a5cc81c995c5d5a5c995960521b604482015290519081900360640190fd5b6000835111610445576040805162461bcd60e51b815260206004820152601560248201527413185cdd081b985b59481a5cc81c995c5d5a5c9959605a1b604482015290519081900360640190fd5b600082511161048f576040805162461bcd60e51b8152602060048201526011602482015270115b585a5b081a5cc81c995c5d5a5c9959607a1b604482015290519081900360640190fd5b61049761094a565b60405180608001604052808681526020018581526020018481526020018360018111156104c057fe5b90523360009081526020818152604090912082518051939450849391926104ec9284929091019061097c565b506020828101518051610505926001850192019061097c565b506040820151805161052191600284019160209091019061097c565b50606082015160038201805460ff19166001838181111561053e57fe5b021790555050505050505050565b33600090815260208190526040812060038101546060928392839283929060ff16600181111561057857fe5b141561076557805460408051602060026001808616156101000260001901909516819004601f81018390048302840183019094528383528594850193908501929185919083018282801561060d5780601f106105e25761010080835404028352916020019161060d565b820191906000526020600020905b8154815290600101906020018083116105f057829003601f168201915b5050855460408051602060026001851615610100026000190190941693909304601f81018490048402820184019092528181529598508794509250840190508282801561069b5780601f106106705761010080835404028352916020019161069b565b820191906000526020600020905b81548152906001019060200180831161067e57829003601f168201915b5050845460408051602060026001851615610100026000190190941693909304601f8101849004840282018401909252818152959750869450925084019050828280156107295780601f106106fe57610100808354040283529160200191610729565b820191906000526020600020905b81548152906001019060200180831161070c57829003601f168201915b505050505090506040518060400160405280600e81526020016d149959dd5b185c88151a58dad95d60921b815250945094509450945050610944565b805460408051602060026001808616156101000260001901909516819004601f8101839004830284018301909452838352859485019390850192918591908301828280156107f45780601f106107c9576101008083540402835291602001916107f4565b820191906000526020600020905b8154815290600101906020018083116107d757829003601f168201915b5050855460408051602060026001851615610100026000190190941693909304601f8101849004840282018401909252818152959850879450925084019050828280156108825780601f1061085757610100808354040283529160200191610882565b820191906000526020600020905b81548152906001019060200180831161086557829003601f168201915b5050845460408051602060026001851615610100026000190190941693909304601f8101849004840282018401909252818152959750869450925084019050828280156109105780601f106108e557610100808354040283529160200191610910565b820191906000526020600020905b8154815290600101906020018083116108f357829003601f168201915b505050505090506040518060400160405280600a81526020016915925408151a58dad95d60b21b8152509450945094509450505b90919293565b60405180608001604052806060815260200160608152602001606081526020016000600181111561097757fe5b905290565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106109bd57805160ff19168380011785556109ea565b828001600101855582156109ea579182015b828111156109ea5782518255916020019190600101906109cf565b506109f69291506109fa565b5090565b610a1491905b808211156109f65760008155600101610a00565b9056fea265627a7a723158207a9fc3b531095e4290dff85b49b6c0bd1d0787d8300e53b4134a0355e907285f64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063796ed3391461003b5780637bd8a878146101f6575b600080fd5b6101f46004803603608081101561005157600080fd5b81019060208101813564010000000081111561006c57600080fd5b82018360208201111561007e57600080fd5b803590602001918460018302840111640100000000831117156100a057600080fd5b91908080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525092959493602081019350359150506401000000008111156100f357600080fd5b82018360208201111561010557600080fd5b8035906020019184600183028401116401000000008311171561012757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929594936020810193503591505064010000000081111561017a57600080fd5b82018360208201111561018c57600080fd5b803590602001918460018302840111640100000000831117156101ae57600080fd5b91908080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152509295505050903560ff1691506103a89050565b005b6101fe61054c565b6040518080602001806020018060200180602001858103855289818151815260200191508051906020019080838360005b8381101561024757818101518382015260200161022f565b50505050905090810190601f1680156102745780820380516001836020036101000a031916815260200191505b5085810384528851815288516020918201918a019080838360005b838110156102a757818101518382015260200161028f565b50505050905090810190601f1680156102d45780820380516001836020036101000a031916815260200191505b50858103835287518152875160209182019189019080838360005b838110156103075781810151838201526020016102ef565b50505050905090810190601f1680156103345780820380516001836020036101000a031916815260200191505b50858103825286518152865160209182019188019080838360005b8381101561036757818101518382015260200161034f565b50505050905090810190601f1680156103945780820380516001836020036101000a031916815260200191505b509850505050505050505060405180910390f35b60008451116103f7576040805162461bcd60e51b8152602060048201526016602482015275119a5c9cdd081b985b59481a5cc81c995c5d5a5c995960521b604482015290519081900360640190fd5b6000835111610445576040805162461bcd60e51b815260206004820152601560248201527413185cdd081b985b59481a5cc81c995c5d5a5c9959605a1b604482015290519081900360640190fd5b600082511161048f576040805162461bcd60e51b8152602060048201526011602482015270115b585a5b081a5cc81c995c5d5a5c9959607a1b604482015290519081900360640190fd5b61049761094a565b60405180608001604052808681526020018581526020018481526020018360018111156104c057fe5b90523360009081526020818152604090912082518051939450849391926104ec9284929091019061097c565b506020828101518051610505926001850192019061097c565b506040820151805161052191600284019160209091019061097c565b50606082015160038201805460ff19166001838181111561053e57fe5b021790555050505050505050565b33600090815260208190526040812060038101546060928392839283929060ff16600181111561057857fe5b141561076557805460408051602060026001808616156101000260001901909516819004601f81018390048302840183019094528383528594850193908501929185919083018282801561060d5780601f106105e25761010080835404028352916020019161060d565b820191906000526020600020905b8154815290600101906020018083116105f057829003601f168201915b5050855460408051602060026001851615610100026000190190941693909304601f81018490048402820184019092528181529598508794509250840190508282801561069b5780601f106106705761010080835404028352916020019161069b565b820191906000526020600020905b81548152906001019060200180831161067e57829003601f168201915b5050845460408051602060026001851615610100026000190190941693909304601f8101849004840282018401909252818152959750869450925084019050828280156107295780601f106106fe57610100808354040283529160200191610729565b820191906000526020600020905b81548152906001019060200180831161070c57829003601f168201915b505050505090506040518060400160405280600e81526020016d149959dd5b185c88151a58dad95d60921b815250945094509450945050610944565b805460408051602060026001808616156101000260001901909516819004601f8101839004830284018301909452838352859485019390850192918591908301828280156107f45780601f106107c9576101008083540402835291602001916107f4565b820191906000526020600020905b8154815290600101906020018083116107d757829003601f168201915b5050855460408051602060026001851615610100026000190190941693909304601f8101849004840282018401909252818152959850879450925084019050828280156108825780601f1061085757610100808354040283529160200191610882565b820191906000526020600020905b81548152906001019060200180831161086557829003601f168201915b5050845460408051602060026001851615610100026000190190941693909304601f8101849004840282018401909252818152959750869450925084019050828280156109105780601f106108e557610100808354040283529160200191610910565b820191906000526020600020905b8154815290600101906020018083116108f357829003601f168201915b505050505090506040518060400160405280600a81526020016915925408151a58dad95d60b21b8152509450945094509450505b90919293565b60405180608001604052806060815260200160608152602001606081526020016000600181111561097757fe5b905290565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106109bd57805160ff19168380011785556109ea565b828001600101855582156109ea579182015b828111156109ea5782518255916020019190600101906109cf565b506109f69291506109fa565b5090565b610a1491905b808211156109f65760008155600101610a00565b9056fea265627a7a723158207a9fc3b531095e4290dff85b49b6c0bd1d0787d8300e53b4134a0355e907285f64736f6c63430005100032",
+  "sourceMap": "69:1991:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:1991:0;;;;;;;",
+  "deployedSourceMap": "69:1991:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:1991:0;;;;;;;;;;;;;;;;;;;;;;;;365:989;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;365:989:0;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;365:989:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;365:989:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;365:989:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;365:989:0;;;;;;;;-1:-1:-1;365:989:0;;-1:-1:-1;;21:11;5:28;;2:2;;;46:1;43;36:12;2:2;365:989:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;365:989:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;365:989:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;365:989:0;;;;;;;;-1:-1:-1;365:989:0;;-1:-1:-1;;21:11;5:28;;2:2;;;46:1;43;36:12;2:2;365:989:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;365:989:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;365:989:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;365:989:0;;-1:-1:-1;;;365:989:0;;;;;-1:-1:-1;365:989:0;;-1:-1:-1;365:989:0:i;:::-;;1362:695;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;1362:695:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1362:695:0;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;1362:695:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1362:695:0;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;1362:695:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1362:695:0;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;1362:695:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;365:989;634:1;613:10;607:24;:28;599:63;;;;;-1:-1:-1;;;599:63:0;;;;;;;;;;;;-1:-1:-1;;;599:63:0;;;;;;;;;;;;;;;711:1;691:9;685:23;:27;677:61;;;;;-1:-1:-1;;;677:61:0;;;;;;;;;;;;-1:-1:-1;;;677:61:0;;;;;;;;;;;;;;;784:1;767:6;761:20;:24;753:54;;;;;-1:-1:-1;;;753:54:0;;;;;;;;;;;;-1:-1:-1;;;753:54:0;;;;;;;;;;;;;;;1034:27;;:::i;:::-;1064:177;;;;;;;;1103:10;1064:177;;;;1142:9;1064:177;;;;1177:6;1064:177;;;;1214:11;1064:177;;;;;;;;;;1321:10;1311:9;:21;;;;;;;;;;;:35;;;;1034:207;;-1:-1:-1;1034:207:0;;1311:21;;:35;;:21;;:35;;;;;:::i;:::-;-1:-1:-1;1311:35:0;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;1311:35:0;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;1311:35:0;;;;;;;;;-1:-1:-1;;1311:35:0;;;;;;;;;;;;;;;-1:-1:-1;;;;;;;;365:989:0:o;1362:695::-;1604:10;1559:32;1594:21;;;;;;;;;;1631:32;;;;1419:23;;;;;;;;1559:32;1631;;;:54;;;;;;;;1628:422;;;1702:154;;;;;;1803:21;1764:24;1702:154;;;;;;-1:-1:-1;;1702:154:0;;;;;;;;;;;;;;;;;;;;;;;;;;;1764:24;;;1803:21;;;;1702:154;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;1702:154:0;;;;;;;;;;;;;-1:-1:-1;;1702:154:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1702:154:0;;-1:-1:-1;1702:154:0;-1:-1:-1;1702:154:0;;;-1:-1:-1;1702:154:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;1702:154:0;;;;;;;;;;;;;-1:-1:-1;;1702:154:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1702:154:0;;-1:-1:-1;1702:154:0;-1:-1:-1;1702:154:0;;;-1:-1:-1;1702:154:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1702:154:0;;;;;;;;;;;;;;1628:422;1889:149;;;;;;1989:21;1950:24;1889:149;;;;;;-1:-1:-1;;1889:149:0;;;;;;;;;;;;;;;;;;;;;;;;;;;1950:24;;;1989:21;;;;1889:149;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;1889:149:0;;;;;;;;;;;;;-1:-1:-1;;1889:149:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1889:149:0;;-1:-1:-1;1889:149:0;-1:-1:-1;1889:149:0;;;-1:-1:-1;1889:149:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;1889:149:0;;;;;;;;;;;;;-1:-1:-1;;1889:149:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1889:149:0;;-1:-1:-1;1889:149:0;-1:-1:-1;1889:149:0;;;-1:-1:-1;1889:149:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1889:149:0;;;;;;;;;;;;1362:695;;;;;:::o;69:1991::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;69:1991:0;;;-1:-1:-1;69:1991:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "//SPDX-License-Identifier: MIT\r\npragma solidity >= 0.5.0 < 0.9.0;\r\n\r\ncontract EventRegistration {\r\n\r\n    enum TicketType { Regular, VIP }\r\n\r\n    struct Attendee {\r\n        string firstName;\r\n        string lastName;\r\n        string email;\r\n        TicketType ticketType;\r\n    }\r\n\r\n    mapping(address => Attendee) attendees;\r\n\r\n    //Register user information\r\n    function register(\r\n        string memory _firstName,\r\n        string memory _lastName,\r\n        string memory _email,\r\n        TicketType _ticketType\r\n        ) public {\r\n\r\n            //Check that fields are filled out\r\n            require(bytes(_firstName).length > 0, \"First name is required\");\r\n            require(bytes(_lastName).length > 0, \"Last name is required\");\r\n            require(bytes(_email).length > 0, \"Email is required\");\r\n//add better email checker with @ symbol and \".com\" at end\r\n//front-end will have radial button for Regular or VIP\r\n//add security check to select radial button on front-end\r\n\r\n            //Create new Attendee\r\n            Attendee memory newAttendee = Attendee({\r\n                firstName: _firstName,\r\n                lastName: _lastName,\r\n                email: _email,\r\n                ticketType: _ticketType\r\n            }); \r\n\r\n        //Map sender address with Attendee information\r\n        attendees[msg.sender] = newAttendee;\r\n    }\r\n\r\n    function getAttendeeInfo() public view returns(\r\n        string memory firstName,\r\n        string memory lastName,\r\n        string memory email,\r\n        string memory ticketType\r\n    ) {\r\n        Attendee storage currentAttendee = attendees[msg.sender];\r\n\r\n        if(attendees[msg.sender].ticketType == TicketType.Regular) {\r\n            return (\r\n            currentAttendee.firstName,\r\n            currentAttendee.lastName,\r\n            currentAttendee.email,\r\n            \"Regular Ticket\");\r\n        } else {\r\n            return(\r\n            currentAttendee.firstName,\r\n            currentAttendee.lastName,\r\n            currentAttendee.email,\r\n            \"VIP Ticket\");\r\n        }\r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\Gessay\\desktop\\erd2\\contracts\\EventRegistration.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/EventRegistration.sol",
+    "exportedSymbols": {
+      "EventRegistration": [
+        124
+      ]
+    },
+    "id": 125,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:33:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 124,
+        "linearizedBaseContracts": [
+          124
+        ],
+        "name": "EventRegistration",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "EventRegistration.TicketType",
+            "id": 4,
+            "members": [
+              {
+                "id": 2,
+                "name": "Regular",
+                "nodeType": "EnumValue",
+                "src": "123:7:0"
+              },
+              {
+                "id": 3,
+                "name": "VIP",
+                "nodeType": "EnumValue",
+                "src": "132:3:0"
+              }
+            ],
+            "name": "TicketType",
+            "nodeType": "EnumDefinition",
+            "src": "105:32:0"
+          },
+          {
+            "canonicalName": "EventRegistration.Attendee",
+            "id": 13,
+            "members": [
+              {
+                "constant": false,
+                "id": 6,
+                "name": "firstName",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "172:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 5,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "172:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 8,
+                "name": "lastName",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "199:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 7,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "199:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 10,
+                "name": "email",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "225:12:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "225:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 12,
+                "name": "ticketType",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "248:21:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_TicketType_$4",
+                  "typeString": "enum EventRegistration.TicketType"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 11,
+                  "name": "TicketType",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 4,
+                  "src": "248:10:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TicketType_$4",
+                    "typeString": "enum EventRegistration.TicketType"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Attendee",
+            "nodeType": "StructDefinition",
+            "scope": 124,
+            "src": "145:132:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17,
+            "name": "attendees",
+            "nodeType": "VariableDeclaration",
+            "scope": 124,
+            "src": "285:38:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Attendee_$13_storage_$",
+              "typeString": "mapping(address => struct EventRegistration.Attendee)"
+            },
+            "typeName": {
+              "id": 16,
+              "keyType": {
+                "id": 14,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "293:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "285:28:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Attendee_$13_storage_$",
+                "typeString": "mapping(address => struct EventRegistration.Attendee)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 15,
+                "name": "Attendee",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 13,
+                "src": "304:8:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Attendee_$13_storage_ptr",
+                  "typeString": "struct EventRegistration.Attendee"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 74,
+              "nodeType": "Block",
+              "src": "534:820:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 34,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "id": 30,
+                                "name": "_firstName",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 19,
+                                "src": "613:10:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              ],
+                              "id": 29,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "607:5:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_bytes_storage_ptr_$",
+                                "typeString": "type(bytes storage pointer)"
+                              },
+                              "typeName": "bytes"
+                            },
+                            "id": 31,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "607:17:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes_memory_ptr",
+                              "typeString": "bytes memory"
+                            }
+                          },
+                          "id": 32,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "607:24:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 33,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "634:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "607:28:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4669727374206e616d65206973207265717569726564",
+                        "id": 35,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "637:24:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_2d058928744b22f9d40a348261fb8657391f40611dbcb8236b55035cb66c5356",
+                          "typeString": "literal_string \"First name is required\""
+                        },
+                        "value": "First name is required"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_2d058928744b22f9d40a348261fb8657391f40611dbcb8236b55035cb66c5356",
+                          "typeString": "literal_string \"First name is required\""
+                        }
+                      ],
+                      "id": 28,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        142,
+                        143
+                      ],
+                      "referencedDeclaration": 143,
+                      "src": "599:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 36,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "599:63:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 37,
+                  "nodeType": "ExpressionStatement",
+                  "src": "599:63:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 44,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "id": 40,
+                                "name": "_lastName",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 21,
+                                "src": "691:9:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              ],
+                              "id": 39,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "685:5:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_bytes_storage_ptr_$",
+                                "typeString": "type(bytes storage pointer)"
+                              },
+                              "typeName": "bytes"
+                            },
+                            "id": 41,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "685:16:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes_memory_ptr",
+                              "typeString": "bytes memory"
+                            }
+                          },
+                          "id": 42,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "685:23:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 43,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "711:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "685:27:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4c617374206e616d65206973207265717569726564",
+                        "id": 45,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "714:23:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_79c0bf52b6dc5cdef21b355d20f85b5e55bafb7118023570a7e6c52d66fded03",
+                          "typeString": "literal_string \"Last name is required\""
+                        },
+                        "value": "Last name is required"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_79c0bf52b6dc5cdef21b355d20f85b5e55bafb7118023570a7e6c52d66fded03",
+                          "typeString": "literal_string \"Last name is required\""
+                        }
+                      ],
+                      "id": 38,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        142,
+                        143
+                      ],
+                      "referencedDeclaration": 143,
+                      "src": "677:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 46,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "677:61:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 47,
+                  "nodeType": "ExpressionStatement",
+                  "src": "677:61:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 54,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "id": 50,
+                                "name": "_email",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 23,
+                                "src": "767:6:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              ],
+                              "id": 49,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "761:5:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_bytes_storage_ptr_$",
+                                "typeString": "type(bytes storage pointer)"
+                              },
+                              "typeName": "bytes"
+                            },
+                            "id": 51,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "761:13:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes_memory_ptr",
+                              "typeString": "bytes memory"
+                            }
+                          },
+                          "id": 52,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "761:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 53,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "784:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "761:24:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "456d61696c206973207265717569726564",
+                        "id": 55,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "787:19:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9d440d71feef8d2176f66d2e2cbf9f5d2525e5602edcbd5aba69fec55e045ecf",
+                          "typeString": "literal_string \"Email is required\""
+                        },
+                        "value": "Email is required"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_9d440d71feef8d2176f66d2e2cbf9f5d2525e5602edcbd5aba69fec55e045ecf",
+                          "typeString": "literal_string \"Email is required\""
+                        }
+                      ],
+                      "id": 48,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        142,
+                        143
+                      ],
+                      "referencedDeclaration": 143,
+                      "src": "753:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 56,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "753:54:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 57,
+                  "nodeType": "ExpressionStatement",
+                  "src": "753:54:0"
+                },
+                {
+                  "assignments": [
+                    59
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 59,
+                      "name": "newAttendee",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 74,
+                      "src": "1034:27:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Attendee_$13_memory_ptr",
+                        "typeString": "struct EventRegistration.Attendee"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 58,
+                        "name": "Attendee",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 13,
+                        "src": "1034:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Attendee_$13_storage_ptr",
+                          "typeString": "struct EventRegistration.Attendee"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 66,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 61,
+                        "name": "_firstName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 19,
+                        "src": "1103:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 62,
+                        "name": "_lastName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21,
+                        "src": "1142:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 63,
+                        "name": "_email",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 23,
+                        "src": "1177:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 64,
+                        "name": "_ticketType",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 25,
+                        "src": "1214:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_TicketType_$4",
+                          "typeString": "enum EventRegistration.TicketType"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_enum$_TicketType_$4",
+                          "typeString": "enum EventRegistration.TicketType"
+                        }
+                      ],
+                      "id": 60,
+                      "name": "Attendee",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13,
+                      "src": "1064:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Attendee_$13_storage_ptr_$",
+                        "typeString": "type(struct EventRegistration.Attendee storage pointer)"
+                      }
+                    },
+                    "id": 65,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [
+                      "firstName",
+                      "lastName",
+                      "email",
+                      "ticketType"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "1064:177:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Attendee_$13_memory",
+                      "typeString": "struct EventRegistration.Attendee memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1034:207:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 72,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 67,
+                        "name": "attendees",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 17,
+                        "src": "1311:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Attendee_$13_storage_$",
+                          "typeString": "mapping(address => struct EventRegistration.Attendee storage ref)"
+                        }
+                      },
+                      "id": 70,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 68,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 139,
+                          "src": "1321:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 69,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1321:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1311:21:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Attendee_$13_storage",
+                        "typeString": "struct EventRegistration.Attendee storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 71,
+                      "name": "newAttendee",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 59,
+                      "src": "1335:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Attendee_$13_memory_ptr",
+                        "typeString": "struct EventRegistration.Attendee memory"
+                      }
+                    },
+                    "src": "1311:35:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Attendee_$13_storage",
+                      "typeString": "struct EventRegistration.Attendee storage ref"
+                    }
+                  },
+                  "id": 73,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1311:35:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 75,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "register",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 19,
+                  "name": "_firstName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 75,
+                  "src": "393:24:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 18,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "393:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 21,
+                  "name": "_lastName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 75,
+                  "src": "428:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 20,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "428:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 23,
+                  "name": "_email",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 75,
+                  "src": "462:20:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 22,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25,
+                  "name": "_ticketType",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 75,
+                  "src": "493:22:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TicketType_$4",
+                    "typeString": "enum EventRegistration.TicketType"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 24,
+                    "name": "TicketType",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 4,
+                    "src": "493:10:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TicketType_$4",
+                      "typeString": "enum EventRegistration.TicketType"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "382:144:0"
+            },
+            "returnParameters": {
+              "id": 27,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "534:0:0"
+            },
+            "scope": 124,
+            "src": "365:989:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 122,
+              "nodeType": "Block",
+              "src": "1548:509:0",
+              "statements": [
+                {
+                  "assignments": [
+                    87
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 87,
+                      "name": "currentAttendee",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 122,
+                      "src": "1559:32:0",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Attendee_$13_storage_ptr",
+                        "typeString": "struct EventRegistration.Attendee"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 86,
+                        "name": "Attendee",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 13,
+                        "src": "1559:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Attendee_$13_storage_ptr",
+                          "typeString": "struct EventRegistration.Attendee"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 92,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 88,
+                      "name": "attendees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 17,
+                      "src": "1594:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Attendee_$13_storage_$",
+                        "typeString": "mapping(address => struct EventRegistration.Attendee storage ref)"
+                      }
+                    },
+                    "id": 91,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 89,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 139,
+                        "src": "1604:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 90,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1604:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1594:21:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Attendee_$13_storage",
+                      "typeString": "struct EventRegistration.Attendee storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1559:56:0"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_enum$_TicketType_$4",
+                      "typeString": "enum EventRegistration.TicketType"
+                    },
+                    "id": 100,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 93,
+                          "name": "attendees",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 17,
+                          "src": "1631:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Attendee_$13_storage_$",
+                            "typeString": "mapping(address => struct EventRegistration.Attendee storage ref)"
+                          }
+                        },
+                        "id": 96,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 94,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 139,
+                            "src": "1641:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 95,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1641:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1631:21:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Attendee_$13_storage",
+                          "typeString": "struct EventRegistration.Attendee storage ref"
+                        }
+                      },
+                      "id": 97,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "ticketType",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 12,
+                      "src": "1631:32:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TicketType_$4",
+                        "typeString": "enum EventRegistration.TicketType"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 98,
+                        "name": "TicketType",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "1667:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_TicketType_$4_$",
+                          "typeString": "type(enum EventRegistration.TicketType)"
+                        }
+                      },
+                      "id": 99,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "Regular",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1667:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_TicketType_$4",
+                        "typeString": "enum EventRegistration.TicketType"
+                      }
+                    },
+                    "src": "1631:54:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 120,
+                    "nodeType": "Block",
+                    "src": "1874:176:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "components": [
+                            {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 111,
+                                "name": "currentAttendee",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 87,
+                                "src": "1910:15:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_Attendee_$13_storage_ptr",
+                                  "typeString": "struct EventRegistration.Attendee storage pointer"
+                                }
+                              },
+                              "id": 112,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "firstName",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 6,
+                              "src": "1910:25:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_storage",
+                                "typeString": "string storage ref"
+                              }
+                            },
+                            {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 113,
+                                "name": "currentAttendee",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 87,
+                                "src": "1950:15:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_Attendee_$13_storage_ptr",
+                                  "typeString": "struct EventRegistration.Attendee storage pointer"
+                                }
+                              },
+                              "id": 114,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "lastName",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 8,
+                              "src": "1950:24:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_storage",
+                                "typeString": "string storage ref"
+                              }
+                            },
+                            {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 115,
+                                "name": "currentAttendee",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 87,
+                                "src": "1989:15:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_Attendee_$13_storage_ptr",
+                                  "typeString": "struct EventRegistration.Attendee storage pointer"
+                                }
+                              },
+                              "id": 116,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "email",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 10,
+                              "src": "1989:21:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_storage",
+                                "typeString": "string storage ref"
+                              }
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "564950205469636b6574",
+                              "id": 117,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "2025:12:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_95878aadce2d74785da8226c2cc5c2ebe7cbeddc734f2dfeb3eb62d3341eb503",
+                                "typeString": "literal_string \"VIP Ticket\""
+                              },
+                              "value": "VIP Ticket"
+                            }
+                          ],
+                          "id": 118,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "TupleExpression",
+                          "src": "1895:143:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$_t_string_storage_$_t_string_storage_$_t_string_storage_$_t_stringliteral_95878aadce2d74785da8226c2cc5c2ebe7cbeddc734f2dfeb3eb62d3341eb503_$",
+                            "typeString": "tuple(string storage ref,string storage ref,string storage ref,literal_string \"VIP Ticket\")"
+                          }
+                        },
+                        "functionReturnParameters": 85,
+                        "id": 119,
+                        "nodeType": "Return",
+                        "src": "1889:149:0"
+                      }
+                    ]
+                  },
+                  "id": 121,
+                  "nodeType": "IfStatement",
+                  "src": "1628:422:0",
+                  "trueBody": {
+                    "id": 110,
+                    "nodeType": "Block",
+                    "src": "1687:181:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "components": [
+                            {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 101,
+                                "name": "currentAttendee",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 87,
+                                "src": "1724:15:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_Attendee_$13_storage_ptr",
+                                  "typeString": "struct EventRegistration.Attendee storage pointer"
+                                }
+                              },
+                              "id": 102,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "firstName",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 6,
+                              "src": "1724:25:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_storage",
+                                "typeString": "string storage ref"
+                              }
+                            },
+                            {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 103,
+                                "name": "currentAttendee",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 87,
+                                "src": "1764:15:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_Attendee_$13_storage_ptr",
+                                  "typeString": "struct EventRegistration.Attendee storage pointer"
+                                }
+                              },
+                              "id": 104,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "lastName",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 8,
+                              "src": "1764:24:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_storage",
+                                "typeString": "string storage ref"
+                              }
+                            },
+                            {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 105,
+                                "name": "currentAttendee",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 87,
+                                "src": "1803:15:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_Attendee_$13_storage_ptr",
+                                  "typeString": "struct EventRegistration.Attendee storage pointer"
+                                }
+                              },
+                              "id": 106,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "email",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 10,
+                              "src": "1803:21:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_storage",
+                                "typeString": "string storage ref"
+                              }
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "526567756c6172205469636b6574",
+                              "id": 107,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1839:16:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_2bb7fa52f10678d19020bfee6118e83b0b71807c47aa99bba6df747b1f18d701",
+                                "typeString": "literal_string \"Regular Ticket\""
+                              },
+                              "value": "Regular Ticket"
+                            }
+                          ],
+                          "id": 108,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "TupleExpression",
+                          "src": "1709:147:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$_t_string_storage_$_t_string_storage_$_t_string_storage_$_t_stringliteral_2bb7fa52f10678d19020bfee6118e83b0b71807c47aa99bba6df747b1f18d701_$",
+                            "typeString": "tuple(string storage ref,string storage ref,string storage ref,literal_string \"Regular Ticket\")"
+                          }
+                        },
+                        "functionReturnParameters": 85,
+                        "id": 109,
+                        "nodeType": "Return",
+                        "src": "1702:154:0"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 123,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAttendeeInfo",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 76,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1386:2:0"
+            },
+            "returnParameters": {
+              "id": 85,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 78,
+                  "name": "firstName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 123,
+                  "src": "1419:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 77,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1419:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 80,
+                  "name": "lastName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 123,
+                  "src": "1453:22:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 79,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1453:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 82,
+                  "name": "email",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 123,
+                  "src": "1486:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 81,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1486:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 84,
+                  "name": "ticketType",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 123,
+                  "src": "1516:24:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 83,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1516:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1408:139:0"
+            },
+            "scope": 124,
+            "src": "1362:695:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 125,
+        "src": "69:1991:0"
+      }
+    ],
+    "src": "32:2028:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/EventRegistration.sol",
+      "exportedSymbols": {
+        "EventRegistration": [
+          124
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".0",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "32:33:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            124
+          ],
+          "name": "EventRegistration",
+          "scope": 125
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "EventRegistration.TicketType",
+              "name": "TicketType"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "Regular"
+                },
+                "id": 2,
+                "name": "EnumValue",
+                "src": "123:7:0"
+              },
+              {
+                "attributes": {
+                  "name": "VIP"
+                },
+                "id": 3,
+                "name": "EnumValue",
+                "src": "132:3:0"
+              }
+            ],
+            "id": 4,
+            "name": "EnumDefinition",
+            "src": "105:32:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "EventRegistration.Attendee",
+              "name": "Attendee",
+              "scope": 124,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "firstName",
+                  "scope": 13,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 5,
+                    "name": "ElementaryTypeName",
+                    "src": "172:6:0"
+                  }
+                ],
+                "id": 6,
+                "name": "VariableDeclaration",
+                "src": "172:16:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "lastName",
+                  "scope": 13,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 7,
+                    "name": "ElementaryTypeName",
+                    "src": "199:6:0"
+                  }
+                ],
+                "id": 8,
+                "name": "VariableDeclaration",
+                "src": "199:15:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "email",
+                  "scope": 13,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 9,
+                    "name": "ElementaryTypeName",
+                    "src": "225:6:0"
+                  }
+                ],
+                "id": 10,
+                "name": "VariableDeclaration",
+                "src": "225:12:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "ticketType",
+                  "scope": 13,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum EventRegistration.TicketType",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "TicketType",
+                      "referencedDeclaration": 4,
+                      "type": "enum EventRegistration.TicketType"
+                    },
+                    "id": 11,
+                    "name": "UserDefinedTypeName",
+                    "src": "248:10:0"
+                  }
+                ],
+                "id": 12,
+                "name": "VariableDeclaration",
+                "src": "248:21:0"
+              }
+            ],
+            "id": 13,
+            "name": "StructDefinition",
+            "src": "145:132:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "attendees",
+              "scope": 124,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => struct EventRegistration.Attendee)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => struct EventRegistration.Attendee)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 14,
+                    "name": "ElementaryTypeName",
+                    "src": "293:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Attendee",
+                      "referencedDeclaration": 13,
+                      "type": "struct EventRegistration.Attendee"
+                    },
+                    "id": 15,
+                    "name": "UserDefinedTypeName",
+                    "src": "304:8:0"
+                  }
+                ],
+                "id": 16,
+                "name": "Mapping",
+                "src": "285:28:0"
+              }
+            ],
+            "id": 17,
+            "name": "VariableDeclaration",
+            "src": "285:38:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "register",
+              "scope": 124,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_firstName",
+                      "scope": 75,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 18,
+                        "name": "ElementaryTypeName",
+                        "src": "393:6:0"
+                      }
+                    ],
+                    "id": 19,
+                    "name": "VariableDeclaration",
+                    "src": "393:24:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_lastName",
+                      "scope": 75,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 20,
+                        "name": "ElementaryTypeName",
+                        "src": "428:6:0"
+                      }
+                    ],
+                    "id": 21,
+                    "name": "VariableDeclaration",
+                    "src": "428:23:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_email",
+                      "scope": 75,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 22,
+                        "name": "ElementaryTypeName",
+                        "src": "462:6:0"
+                      }
+                    ],
+                    "id": 23,
+                    "name": "VariableDeclaration",
+                    "src": "462:20:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_ticketType",
+                      "scope": 75,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "enum EventRegistration.TicketType",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "TicketType",
+                          "referencedDeclaration": 4,
+                          "type": "enum EventRegistration.TicketType"
+                        },
+                        "id": 24,
+                        "name": "UserDefinedTypeName",
+                        "src": "493:10:0"
+                      }
+                    ],
+                    "id": 25,
+                    "name": "VariableDeclaration",
+                    "src": "493:22:0"
+                  }
+                ],
+                "id": 26,
+                "name": "ParameterList",
+                "src": "382:144:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 27,
+                "name": "ParameterList",
+                "src": "534:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_2d058928744b22f9d40a348261fb8657391f40611dbcb8236b55035cb66c5356",
+                                  "typeString": "literal_string \"First name is required\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                142,
+                                143
+                              ],
+                              "referencedDeclaration": 143,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 28,
+                            "name": "Identifier",
+                            "src": "599:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": ">",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "length",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "isStructConstructorCall": false,
+                                      "lValueRequested": false,
+                                      "names": [
+                                        null
+                                      ],
+                                      "type": "bytes memory",
+                                      "type_conversion": true
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": [
+                                            {
+                                              "typeIdentifier": "t_string_memory_ptr",
+                                              "typeString": "string memory"
+                                            }
+                                          ],
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "type": "type(bytes storage pointer)",
+                                          "value": "bytes"
+                                        },
+                                        "id": 29,
+                                        "name": "ElementaryTypeNameExpression",
+                                        "src": "607:5:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 19,
+                                          "type": "string memory",
+                                          "value": "_firstName"
+                                        },
+                                        "id": 30,
+                                        "name": "Identifier",
+                                        "src": "613:10:0"
+                                      }
+                                    ],
+                                    "id": 31,
+                                    "name": "FunctionCall",
+                                    "src": "607:17:0"
+                                  }
+                                ],
+                                "id": 32,
+                                "name": "MemberAccess",
+                                "src": "607:24:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 0",
+                                  "value": "0"
+                                },
+                                "id": 33,
+                                "name": "Literal",
+                                "src": "634:1:0"
+                              }
+                            ],
+                            "id": 34,
+                            "name": "BinaryOperation",
+                            "src": "607:28:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "4669727374206e616d65206973207265717569726564",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"First name is required\"",
+                              "value": "First name is required"
+                            },
+                            "id": 35,
+                            "name": "Literal",
+                            "src": "637:24:0"
+                          }
+                        ],
+                        "id": 36,
+                        "name": "FunctionCall",
+                        "src": "599:63:0"
+                      }
+                    ],
+                    "id": 37,
+                    "name": "ExpressionStatement",
+                    "src": "599:63:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_79c0bf52b6dc5cdef21b355d20f85b5e55bafb7118023570a7e6c52d66fded03",
+                                  "typeString": "literal_string \"Last name is required\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                142,
+                                143
+                              ],
+                              "referencedDeclaration": 143,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 38,
+                            "name": "Identifier",
+                            "src": "677:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": ">",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "length",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "isStructConstructorCall": false,
+                                      "lValueRequested": false,
+                                      "names": [
+                                        null
+                                      ],
+                                      "type": "bytes memory",
+                                      "type_conversion": true
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": [
+                                            {
+                                              "typeIdentifier": "t_string_memory_ptr",
+                                              "typeString": "string memory"
+                                            }
+                                          ],
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "type": "type(bytes storage pointer)",
+                                          "value": "bytes"
+                                        },
+                                        "id": 39,
+                                        "name": "ElementaryTypeNameExpression",
+                                        "src": "685:5:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 21,
+                                          "type": "string memory",
+                                          "value": "_lastName"
+                                        },
+                                        "id": 40,
+                                        "name": "Identifier",
+                                        "src": "691:9:0"
+                                      }
+                                    ],
+                                    "id": 41,
+                                    "name": "FunctionCall",
+                                    "src": "685:16:0"
+                                  }
+                                ],
+                                "id": 42,
+                                "name": "MemberAccess",
+                                "src": "685:23:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 0",
+                                  "value": "0"
+                                },
+                                "id": 43,
+                                "name": "Literal",
+                                "src": "711:1:0"
+                              }
+                            ],
+                            "id": 44,
+                            "name": "BinaryOperation",
+                            "src": "685:27:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "4c617374206e616d65206973207265717569726564",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Last name is required\"",
+                              "value": "Last name is required"
+                            },
+                            "id": 45,
+                            "name": "Literal",
+                            "src": "714:23:0"
+                          }
+                        ],
+                        "id": 46,
+                        "name": "FunctionCall",
+                        "src": "677:61:0"
+                      }
+                    ],
+                    "id": 47,
+                    "name": "ExpressionStatement",
+                    "src": "677:61:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_9d440d71feef8d2176f66d2e2cbf9f5d2525e5602edcbd5aba69fec55e045ecf",
+                                  "typeString": "literal_string \"Email is required\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                142,
+                                143
+                              ],
+                              "referencedDeclaration": 143,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 48,
+                            "name": "Identifier",
+                            "src": "753:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": ">",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "length",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "isStructConstructorCall": false,
+                                      "lValueRequested": false,
+                                      "names": [
+                                        null
+                                      ],
+                                      "type": "bytes memory",
+                                      "type_conversion": true
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": [
+                                            {
+                                              "typeIdentifier": "t_string_memory_ptr",
+                                              "typeString": "string memory"
+                                            }
+                                          ],
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "type": "type(bytes storage pointer)",
+                                          "value": "bytes"
+                                        },
+                                        "id": 49,
+                                        "name": "ElementaryTypeNameExpression",
+                                        "src": "761:5:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 23,
+                                          "type": "string memory",
+                                          "value": "_email"
+                                        },
+                                        "id": 50,
+                                        "name": "Identifier",
+                                        "src": "767:6:0"
+                                      }
+                                    ],
+                                    "id": 51,
+                                    "name": "FunctionCall",
+                                    "src": "761:13:0"
+                                  }
+                                ],
+                                "id": 52,
+                                "name": "MemberAccess",
+                                "src": "761:20:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 0",
+                                  "value": "0"
+                                },
+                                "id": 53,
+                                "name": "Literal",
+                                "src": "784:1:0"
+                              }
+                            ],
+                            "id": 54,
+                            "name": "BinaryOperation",
+                            "src": "761:24:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "456d61696c206973207265717569726564",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Email is required\"",
+                              "value": "Email is required"
+                            },
+                            "id": 55,
+                            "name": "Literal",
+                            "src": "787:19:0"
+                          }
+                        ],
+                        "id": 56,
+                        "name": "FunctionCall",
+                        "src": "753:54:0"
+                      }
+                    ],
+                    "id": 57,
+                    "name": "ExpressionStatement",
+                    "src": "753:54:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        59
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "newAttendee",
+                          "scope": 74,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct EventRegistration.Attendee",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Attendee",
+                              "referencedDeclaration": 13,
+                              "type": "struct EventRegistration.Attendee"
+                            },
+                            "id": 58,
+                            "name": "UserDefinedTypeName",
+                            "src": "1034:8:0"
+                          }
+                        ],
+                        "id": 59,
+                        "name": "VariableDeclaration",
+                        "src": "1034:27:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": true,
+                          "lValueRequested": false,
+                          "names": [
+                            "firstName",
+                            "lastName",
+                            "email",
+                            "ticketType"
+                          ],
+                          "type": "struct EventRegistration.Attendee memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_enum$_TicketType_$4",
+                                  "typeString": "enum EventRegistration.TicketType"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 13,
+                              "type": "type(struct EventRegistration.Attendee storage pointer)",
+                              "value": "Attendee"
+                            },
+                            "id": 60,
+                            "name": "Identifier",
+                            "src": "1064:8:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 19,
+                              "type": "string memory",
+                              "value": "_firstName"
+                            },
+                            "id": 61,
+                            "name": "Identifier",
+                            "src": "1103:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 21,
+                              "type": "string memory",
+                              "value": "_lastName"
+                            },
+                            "id": 62,
+                            "name": "Identifier",
+                            "src": "1142:9:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 23,
+                              "type": "string memory",
+                              "value": "_email"
+                            },
+                            "id": 63,
+                            "name": "Identifier",
+                            "src": "1177:6:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 25,
+                              "type": "enum EventRegistration.TicketType",
+                              "value": "_ticketType"
+                            },
+                            "id": 64,
+                            "name": "Identifier",
+                            "src": "1214:11:0"
+                          }
+                        ],
+                        "id": 65,
+                        "name": "FunctionCall",
+                        "src": "1064:177:0"
+                      }
+                    ],
+                    "id": 66,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1034:207:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct EventRegistration.Attendee storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct EventRegistration.Attendee storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 17,
+                                  "type": "mapping(address => struct EventRegistration.Attendee storage ref)",
+                                  "value": "attendees"
+                                },
+                                "id": 67,
+                                "name": "Identifier",
+                                "src": "1311:9:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 139,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 68,
+                                    "name": "Identifier",
+                                    "src": "1321:3:0"
+                                  }
+                                ],
+                                "id": 69,
+                                "name": "MemberAccess",
+                                "src": "1321:10:0"
+                              }
+                            ],
+                            "id": 70,
+                            "name": "IndexAccess",
+                            "src": "1311:21:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 59,
+                              "type": "struct EventRegistration.Attendee memory",
+                              "value": "newAttendee"
+                            },
+                            "id": 71,
+                            "name": "Identifier",
+                            "src": "1335:11:0"
+                          }
+                        ],
+                        "id": 72,
+                        "name": "Assignment",
+                        "src": "1311:35:0"
+                      }
+                    ],
+                    "id": 73,
+                    "name": "ExpressionStatement",
+                    "src": "1311:35:0"
+                  }
+                ],
+                "id": 74,
+                "name": "Block",
+                "src": "534:820:0"
+              }
+            ],
+            "id": 75,
+            "name": "FunctionDefinition",
+            "src": "365:989:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getAttendeeInfo",
+              "scope": 124,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 76,
+                "name": "ParameterList",
+                "src": "1386:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "firstName",
+                      "scope": 123,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 77,
+                        "name": "ElementaryTypeName",
+                        "src": "1419:6:0"
+                      }
+                    ],
+                    "id": 78,
+                    "name": "VariableDeclaration",
+                    "src": "1419:23:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "lastName",
+                      "scope": 123,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 79,
+                        "name": "ElementaryTypeName",
+                        "src": "1453:6:0"
+                      }
+                    ],
+                    "id": 80,
+                    "name": "VariableDeclaration",
+                    "src": "1453:22:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "email",
+                      "scope": 123,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 81,
+                        "name": "ElementaryTypeName",
+                        "src": "1486:6:0"
+                      }
+                    ],
+                    "id": 82,
+                    "name": "VariableDeclaration",
+                    "src": "1486:19:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "ticketType",
+                      "scope": 123,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 83,
+                        "name": "ElementaryTypeName",
+                        "src": "1516:6:0"
+                      }
+                    ],
+                    "id": 84,
+                    "name": "VariableDeclaration",
+                    "src": "1516:24:0"
+                  }
+                ],
+                "id": 85,
+                "name": "ParameterList",
+                "src": "1408:139:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        87
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "currentAttendee",
+                          "scope": 122,
+                          "stateVariable": false,
+                          "storageLocation": "storage",
+                          "type": "struct EventRegistration.Attendee",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Attendee",
+                              "referencedDeclaration": 13,
+                              "type": "struct EventRegistration.Attendee"
+                            },
+                            "id": 86,
+                            "name": "UserDefinedTypeName",
+                            "src": "1559:8:0"
+                          }
+                        ],
+                        "id": 87,
+                        "name": "VariableDeclaration",
+                        "src": "1559:32:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct EventRegistration.Attendee storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 17,
+                              "type": "mapping(address => struct EventRegistration.Attendee storage ref)",
+                              "value": "attendees"
+                            },
+                            "id": 88,
+                            "name": "Identifier",
+                            "src": "1594:9:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 139,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 89,
+                                "name": "Identifier",
+                                "src": "1604:3:0"
+                              }
+                            ],
+                            "id": 90,
+                            "name": "MemberAccess",
+                            "src": "1604:10:0"
+                          }
+                        ],
+                        "id": 91,
+                        "name": "IndexAccess",
+                        "src": "1594:21:0"
+                      }
+                    ],
+                    "id": 92,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1559:56:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_enum$_TicketType_$4",
+                            "typeString": "enum EventRegistration.TicketType"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "==",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "ticketType",
+                              "referencedDeclaration": 12,
+                              "type": "enum EventRegistration.TicketType"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct EventRegistration.Attendee storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 17,
+                                      "type": "mapping(address => struct EventRegistration.Attendee storage ref)",
+                                      "value": "attendees"
+                                    },
+                                    "id": 93,
+                                    "name": "Identifier",
+                                    "src": "1631:9:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "sender",
+                                      "referencedDeclaration": null,
+                                      "type": "address payable"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 139,
+                                          "type": "msg",
+                                          "value": "msg"
+                                        },
+                                        "id": 94,
+                                        "name": "Identifier",
+                                        "src": "1641:3:0"
+                                      }
+                                    ],
+                                    "id": 95,
+                                    "name": "MemberAccess",
+                                    "src": "1641:10:0"
+                                  }
+                                ],
+                                "id": 96,
+                                "name": "IndexAccess",
+                                "src": "1631:21:0"
+                              }
+                            ],
+                            "id": 97,
+                            "name": "MemberAccess",
+                            "src": "1631:32:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Regular",
+                              "referencedDeclaration": null,
+                              "type": "enum EventRegistration.TicketType"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4,
+                                  "type": "type(enum EventRegistration.TicketType)",
+                                  "value": "TicketType"
+                                },
+                                "id": 98,
+                                "name": "Identifier",
+                                "src": "1667:10:0"
+                              }
+                            ],
+                            "id": 99,
+                            "name": "MemberAccess",
+                            "src": "1667:18:0"
+                          }
+                        ],
+                        "id": 100,
+                        "name": "BinaryOperation",
+                        "src": "1631:54:0"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "functionReturnParameters": 85
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "tuple(string storage ref,string storage ref,string storage ref,literal_string \"Regular Ticket\")"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "firstName",
+                                      "referencedDeclaration": 6,
+                                      "type": "string storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 87,
+                                          "type": "struct EventRegistration.Attendee storage pointer",
+                                          "value": "currentAttendee"
+                                        },
+                                        "id": 101,
+                                        "name": "Identifier",
+                                        "src": "1724:15:0"
+                                      }
+                                    ],
+                                    "id": 102,
+                                    "name": "MemberAccess",
+                                    "src": "1724:25:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "lastName",
+                                      "referencedDeclaration": 8,
+                                      "type": "string storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 87,
+                                          "type": "struct EventRegistration.Attendee storage pointer",
+                                          "value": "currentAttendee"
+                                        },
+                                        "id": 103,
+                                        "name": "Identifier",
+                                        "src": "1764:15:0"
+                                      }
+                                    ],
+                                    "id": 104,
+                                    "name": "MemberAccess",
+                                    "src": "1764:24:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "email",
+                                      "referencedDeclaration": 10,
+                                      "type": "string storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 87,
+                                          "type": "struct EventRegistration.Attendee storage pointer",
+                                          "value": "currentAttendee"
+                                        },
+                                        "id": 105,
+                                        "name": "Identifier",
+                                        "src": "1803:15:0"
+                                      }
+                                    ],
+                                    "id": 106,
+                                    "name": "MemberAccess",
+                                    "src": "1803:21:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "526567756c6172205469636b6574",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "string",
+                                      "type": "literal_string \"Regular Ticket\"",
+                                      "value": "Regular Ticket"
+                                    },
+                                    "id": 107,
+                                    "name": "Literal",
+                                    "src": "1839:16:0"
+                                  }
+                                ],
+                                "id": 108,
+                                "name": "TupleExpression",
+                                "src": "1709:147:0"
+                              }
+                            ],
+                            "id": 109,
+                            "name": "Return",
+                            "src": "1702:154:0"
+                          }
+                        ],
+                        "id": 110,
+                        "name": "Block",
+                        "src": "1687:181:0"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "functionReturnParameters": 85
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "tuple(string storage ref,string storage ref,string storage ref,literal_string \"VIP Ticket\")"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "firstName",
+                                      "referencedDeclaration": 6,
+                                      "type": "string storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 87,
+                                          "type": "struct EventRegistration.Attendee storage pointer",
+                                          "value": "currentAttendee"
+                                        },
+                                        "id": 111,
+                                        "name": "Identifier",
+                                        "src": "1910:15:0"
+                                      }
+                                    ],
+                                    "id": 112,
+                                    "name": "MemberAccess",
+                                    "src": "1910:25:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "lastName",
+                                      "referencedDeclaration": 8,
+                                      "type": "string storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 87,
+                                          "type": "struct EventRegistration.Attendee storage pointer",
+                                          "value": "currentAttendee"
+                                        },
+                                        "id": 113,
+                                        "name": "Identifier",
+                                        "src": "1950:15:0"
+                                      }
+                                    ],
+                                    "id": 114,
+                                    "name": "MemberAccess",
+                                    "src": "1950:24:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "email",
+                                      "referencedDeclaration": 10,
+                                      "type": "string storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 87,
+                                          "type": "struct EventRegistration.Attendee storage pointer",
+                                          "value": "currentAttendee"
+                                        },
+                                        "id": 115,
+                                        "name": "Identifier",
+                                        "src": "1989:15:0"
+                                      }
+                                    ],
+                                    "id": 116,
+                                    "name": "MemberAccess",
+                                    "src": "1989:21:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "564950205469636b6574",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "string",
+                                      "type": "literal_string \"VIP Ticket\"",
+                                      "value": "VIP Ticket"
+                                    },
+                                    "id": 117,
+                                    "name": "Literal",
+                                    "src": "2025:12:0"
+                                  }
+                                ],
+                                "id": 118,
+                                "name": "TupleExpression",
+                                "src": "1895:143:0"
+                              }
+                            ],
+                            "id": 119,
+                            "name": "Return",
+                            "src": "1889:149:0"
+                          }
+                        ],
+                        "id": 120,
+                        "name": "Block",
+                        "src": "1874:176:0"
+                      }
+                    ],
+                    "id": 121,
+                    "name": "IfStatement",
+                    "src": "1628:422:0"
+                  }
+                ],
+                "id": 122,
+                "name": "Block",
+                "src": "1548:509:0"
+              }
+            ],
+            "id": 123,
+            "name": "FunctionDefinition",
+            "src": "1362:695:0"
+          }
+        ],
+        "id": 124,
+        "name": "ContractDefinition",
+        "src": "69:1991:0"
+      }
+    ],
+    "id": 125,
+    "name": "SourceUnit",
+    "src": "32:2028:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xB0FBdafD3E07ac4D73bD35c63d991b3536762c94",
+      "transactionHash": "0xfe2b2894e6f32314ea481dd740ceff0faf206568b57375c9e192654670101fd9"
+    }
+  },
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2023-11-04T14:17:34.959Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
