@@ -18,9 +18,20 @@
     <body>
         <div class="parent">
             <div>
-                <button type="submit" id="connect-wallet">Connect Wallet</button>
-                <button id="get-info-button">Get My Registration Info</button>
-                <div id="attendee-info"></div>
+
+                <!--Row for Registration Info results-->
+                <div class="info-bar">
+                    <div id="attendee-info" class="attendee-info"></div>
+                </div>
+
+                <!--Row for Connect Wallet & My Registration Info buttons-->
+                <div class="form-row">
+                    <button type="submit" id="connect-wallet" class="button">Connect Wallet</button>
+                    &nbsp;&nbsp;&nbsp;
+                    <button type="submit" id="get-info-button" class="button">My Registration Info</button>
+                </div>
+
+
                 <div>
                     <h1 class="larger-heading">Event Registration Database</h1>
                     
@@ -58,7 +69,7 @@
                             <!-- Submit Button -->
                             <br>
                             <div class="form-row">
-                                <button type="submit" id='submit-button' class="submit-button">Submit</button>
+                                <button type="submit" id='submit-button' class="button">Submit</button>
                             </div>
 
                         </form>

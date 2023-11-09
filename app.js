@@ -105,6 +105,7 @@ document.getElementById('get-info-button').addEventListener('click', async () =>
     `Ticket Type: ${attendeeInfo.ticketType}`;
 
     document.getElementById('attendee-info').innerText = displayInfo;
+    
     console.log(displayInfo);
   } catch (error) {
     console.error('Error fetching attendee info:', error);

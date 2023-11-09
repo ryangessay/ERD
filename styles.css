@@ -5,7 +5,7 @@ body {
     background-repeat: no-repeat; /* Prevent image repetition */
     color: whitesmoke; /*Set text to whitesmoke */
     height: 100vh; /* Set background image to take up entire screen */
-    overflow: hidden; /* Get rid of spacebar */
+    overflow: hidden; /* Get rid of the spacebar */
 }
 
 label {
@@ -29,6 +29,10 @@ form {
     text-shadow: 2px 2px 4px #000;
 }
 
+.info-bar {
+    height: 85px;
+}
+
 .form-row {
     display: flex;
     justify-content: center;
@@ -43,19 +47,26 @@ input:focus {
     outline: none;
 }
 
-.submit-button {
+.button {
     background-color: #000000;
-    color: white;
-    padding: 13px 23px;
-    font-size: 16px;
-    border: none; 
+    color: whitesmoke;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: .5 solid whitesmoke;
     cursor: pointer; 
 }
 
-.submit-button:hover {
+.button:hover {
     background-color: #006ae3;
 }
 
-.connect-wallet {
-    right: 50px;
+.attendee-info {
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px #000;
 }
+
+/*For testing purposes to see where div outlines are */
+div {
+    outline: 0px solid rgb(255, 0, 0); /* Outlines don't affect layout */
+  }
