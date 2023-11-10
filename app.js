@@ -57,37 +57,53 @@ function setupEventListeners() {
 
 
 //Submit button interaction
-document.getElementById('submit-button').addEventListener('click', () => {
+document.getElementById('submit-button').addEventListener('click', async () => {
   
   //Check that MetaMask account is connected
   if(!connectedAccount) {
     alert('Please connect your MetaMask wallet!')
-    console.error('Please connect your MetaMask wallet!');
     return;
   }
 
-  // Get user input from HTML form
-  const firstName = document.getElementById('firstName').value;
-  const lastName = document.getElementById('lastName').value;
-  const email = document.getElementById('email').value;
-  const ticketType = parseInt(document.querySelector('input[name="ticketType"]:checked').value, 10);
+  try {
+    const attendeeInfo = await contract.methods.getAttendeeInfo().call({ from: connectedAccount});
 
-  //Send form data to the contract's 'register' function
-  contract.methods
-    .register(firstName, lastName, email, ticketType)
-    .send({ from: connectedAccount }) // Replace with your Ganache account address
-    .on('transactionHash', (hash) => {
-      // Transaction sent
-      console.log('Transaction Hash:', hash);
-    })
-    .on('receipt', (receipt) => {
-      // Transaction confirmed
-      console.log('Transaction Receipt:', receipt);
-    })
-    .on('error', (error) => {
-      // Transaction failed
-      console.error('Transaction Error:', error);
-    });
+    if (attendeeInfo && attendeeInfo.firstName !== '') {
+      alert('You have already registered!');
+
+      document.getElementById('attendee-info').innerHTML = 
+      `First Name: ${attendeeInfo.firstName}<br>` +
+      `Last Name: ${attendeeInfo.lastName}<br>` +
+      `Email: ${attendeeInfo.email}<br>` +
+      `Ticket Type: ${attendeeInfo.ticketType}`;
+    } else {
+
+      // Get user input from HTML form
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const email = document.getElementById('email').value;
+      const ticketType = parseInt(document.querySelector('input[name="ticketType"]:checked').value, 10);
+
+      //Send form data to the contract's 'register' function
+      contract.methods
+        .register(firstName, lastName, email, ticketType)
+        .send({ from: connectedAccount }) // Replace with your Ganache account address
+        .on('transactionHash', (hash) => {
+          // Transaction sent
+          console.log('Transaction Hash:', hash);
+        })
+        .on('receipt', (receipt) => {
+          // Transaction confirmed
+          console.log('Transaction Receipt:', receipt);
+        })
+        .on('error', (error) => {
+          // Transaction failed
+          console.error('Transaction Error:', error);
+        });
+    }
+  } catch (error) {
+      console.error('Error fetching attendee info:', error);
+  }
 });
 
 
