@@ -122,7 +122,7 @@ document.getElementById('get-info-button').addEventListener('click', async () =>
 
     const displayInfo = `First Name: ${attendeeInfo.firstName}\n` +
     `Last Name: ${attendeeInfo.lastName}\n` +
-    `Email Address: ${attendeeInfo.email}\n` +
+    `Email: ${attendeeInfo.email}\n` +
     `Ticket Type: ${attendeeInfo.ticketType}`;
 
     document.getElementById('attendee-info').innerText = displayInfo;
