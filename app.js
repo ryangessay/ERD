@@ -42,7 +42,7 @@ if (typeof window.ethereum !== 'undefined') {
 
       // Update the message in attendee-info
     document.getElementById('attendee-info').innerText = "Wallet connected!";
-    
+
     } catch (error) {
       console.error('Error connecting wallet:', error);
     }
@@ -56,12 +56,13 @@ if (typeof window.ethereum !== 'undefined') {
 function setupEventListeners() {
 
 
-// Add event listeners to your HTML elements to trigger interactions with the contract
+//Submit button interaction
 document.getElementById('submit-button').addEventListener('click', () => {
   
   //Check that MetaMask account is connected
   if(!connectedAccount) {
-    console.error('Please connect your MetaMask account!');
+    alert('Please connect your MetaMask wallet!')
+    console.error('Please connect your MetaMask wallet!');
     return;
   }
 
