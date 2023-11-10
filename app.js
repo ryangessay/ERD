@@ -39,6 +39,10 @@ if (typeof window.ethereum !== 'undefined') {
       const accounts = await web3.eth.getAccounts();
       connectedAccount = accounts[0];
       console.log(`Connected with address: ${connectedAccount}`);
+
+      // Update the message in attendee-info
+    document.getElementById('attendee-info').innerText = "Wallet connected!";
+    
     } catch (error) {
       console.error('Error connecting wallet:', error);
     }
