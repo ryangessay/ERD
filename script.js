@@ -1,23 +1,19 @@
-//Listens for submit button to be hit
-//Validates form data and then app.js handles the other logic
-
-
+//Event listener for the submit button
+//Validates form data before app.js handles submission logic
 
 document.getElementById('submit-button').addEventListener('click', function (event) {
-    // Prevent the default form submission behavior
-    event.preventDefault();
+    event.preventDefault();  // Prevent the default form submission behavior
 
-    // Call the validateForm function to check the form data
     if (validateForm()) {
-        // If the form is valid, you can proceed with any additional logic here
-        // For example, sending data to the contract or to a server
+        // If the form is valid, proceed with additional logic to send form data
     }
 });
 
-
-// Check that all fields in the form are filled out
+// Validates the form data
+// Checks if all fields are filled out correctly
+// Returns 'true' if the form is valid, False will alert the user
 function validateForm() {
-    // Check if at least one character is entered in first name and last name
+    // Check - first name and last name contain at least one character
     const firstName = document.getElementById('firstName').value;
     const lastName = document.getElementById('lastName').value;
 
@@ -26,14 +22,14 @@ function validateForm() {
         return false;
     }
 
-    // Check if the email address contains the @ symbol and ends with ".com"
+    // Check - email address contains the '@' symbol and ends with '.com'
     const email = document.getElementById('email').value;
     if (!email.includes('@') || !email.endsWith('.com')) {
         alert('Invalid Email Address: address should contain "@" and end with ".com".');
         return false;
     }
 
-    // Check if a radio button is selected
+    // Check - radio button is selected
     const regularRadio = document.getElementById('regular');
     const vipRadio = document.getElementById('vip');
     if (!regularRadio.checked && !vipRadio.checked) {
