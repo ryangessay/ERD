@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
        
+        <!-- Page Title -->
         <title>Event Registration Database</title>
 
         <!-- CSS Styles -->
@@ -16,23 +17,26 @@
     </head>
 
     <body>
+        <!-- Main Container -->
         <div class="parent">
             <div>
 
-                <!--Row for Registration Info results-->
+                <!-- Information Bar - Displays Registration Info results -->
                 <div class="info-bar">
-                    <div id="attendee-info" class="attendee-info">Please connect your MetaMask wallet!
+                    <div id="attendee-info" class="attendee-info">**Please connect your MetaMask wallet!**
                     </div>  
                 </div>
 
-                <!--Row for Connect Wallet & My Registration Info buttons-->
+                <!-- Action Buttons -->
                 <div class="form-row">
+                    <!-- Connect Wallet Button -->
                     <button type="submit" id="connect-wallet" class="button">Connect Wallet</button>
                     &nbsp;&nbsp;&nbsp;
+                    <!-- Registration Information Button -->
                     <button type="submit" id="get-info-button" class="button">My Registration Info</button>
                 </div>
 
-
+                <!-- Event Registration Form -->
                 <div>
                     <h1 class="larger-heading">Event Registration Database</h1>
                     
@@ -50,7 +54,7 @@
                             </div>
 
                             <!-- Email Address -->
-                            <div class="form-row">
+                            <div class="form-group">
                                 <div>
                                 <label for="email">Email Address:</label><br>
                                 <input type="text" id="email" name="email" placeholder="Email Address">
@@ -82,16 +86,15 @@
         <!-- Node.js -->
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 
-        <!-- Web3 was 1.6.0-->
+        <!-- Web3.js -->
         <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
 
-        <!-- Script JS -->
+        <!-- Script.js -->
         <script src="script.js"></script>
 
-        <!-- App JS-->
+        <!-- App.js -->
         <script src="app.js"></script>
-
-          
+       
         </script>
     </body>
 </html>

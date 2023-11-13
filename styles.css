@@ -1,27 +1,19 @@
+/* Global Body Styles */
+/* Sets overall background and text for the entire page */
 body {
-    background-image: url('music.jpg');
-    background-size: cover; /* Adjust the image size to cover the entire viewport */
-    background-position: center; /* Center the image on the viewport */
-    background-repeat: no-repeat; /* Prevent image repetition */
-    color: whitesmoke; /*Set text to whitesmoke */
-    height: 100vh; /* Set background image to take up entire screen */
-    overflow: hidden; /* Get rid of the spacebar */
+    background: linear-gradient(rgba(0, 0, 0, 0.034), rgb(0, 0, 0)), url('music.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: whitesmoke;
+    height: 100vh;
+    overflow: hidden;
 }
 
+/* Font and Header - Size and Shadows */
 label {
     font-size: 16px; 
     text-shadow: 2px 2px 4px #000;
-}
-
-form {
-    text-align: center;
-}
-
-.parent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 65vh;
 }
 
 .larger-heading {
@@ -29,8 +21,12 @@ form {
     text-shadow: 2px 2px 4px #000;
 }
 
-.info-bar {
-    height: 85px;
+/* Flexbox for Central Alignment of Site Content */
+.parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65vh;
 }
 
 .form-row {
@@ -39,14 +35,17 @@ form {
 }
 
 .form-group {
-    margin: 20px;
+    margin: 12px;
     text-align: center;
 }
 
+/* Remove Outline around Input Fields*/
 input:focus {
     outline: none;
 }
 
+/* Button Styles */
+/* Consistent styling for all buttons */
 .button {
     background-color: #000000;
     color: whitesmoke;
@@ -60,13 +59,20 @@ input:focus {
     background-color: #006ae3;
 }
 
+/* Information Bar */
+/* Fixed height to display user messages or registration information*/
+.info-bar {
+    height: 85px;
+}
+
 .attendee-info {
     text-align: center;
     color: whitesmoke;
     text-shadow: 2px 2px 4px #000;
 }
 
-/*For testing purposes to see where div outlines are */
+/* Temporary for Testing Purposes */
+/* Red outline for visualizing div boundaries */
 div {
-    outline: 0px solid rgb(255, 0, 0); /* Outlines don't affect layout */
+    outline: 0px solid rgb(255, 0, 0);
   }
