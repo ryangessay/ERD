@@ -90,16 +90,32 @@ Modify files as needed for your environment:
 
 ### Usage
 
-- Load the website
-- Connect your MetaMask account
-- Fill in form data
-- Submit your Registration information
-- Recall information via 'My Registration Information' button
+These instructions guide you through the key steps to use the Event Registration DApp. The application is designed to be straightforward and secure using your MetaMask wallet.
+
+1. **Load the Website**
+   - Open your web browser and navigate to `http://localhost:8080`. This will take you to the homepage of the Event Registration DApp.
+
+2. **Connect Your MetaMask Account**
+   - Click on the 'Connect Wallet' button and follow the prompts in the MetaMask extension to establish a connection.
+   - This is essential for registering for an event as your registration details will be linked to your MetaMask wallet address.
+
+3. **Fill in the Registration Form**
+   - Enter your details in the name and email fields and select the type of event ticket you wish to purchase.
+   - Ensure that all the information is correct. This information will be stored on the blockchain and associated with your wallet address.
+
+4. **Submit Your Registration Information**
+   - Click the 'Submit' button to register. 
+   - Your information will be processed and securely stored on the Ethereum blockchain.
+
+5. **View Your Registration Information**
+   - To view or verify your registration details, click on the 'My Registration Information' button. 
+   - This will retrieve your registration details from the blockchain and display them on the screen.
 
 ### Technologies Used
 
-- Solidity, HTML, CSS, JavaScript
-- Truffle, NodeJS, Web3JS, Ganache
+- Solidity, HTML, CSS
+- JavaScript, NodeJS, Web3JS
+- Truffle, Ganache, MetaMask
 
 ### Contact Information
 
