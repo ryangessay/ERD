@@ -2,25 +2,25 @@
 
 A decentralized web application that allows users to sign up for events using their MetaMask wallet. Registration information is processed through a Solidity contract and recorded on the blockchain, enabling retrieval of user information at a later time.
 
-## Getting Started
+### Getting Started
 
 These instructions will get the project up and running on your local machine.
 
 ### Prerequisites
 
-Ganache: A local Ethereum blockchain for hosting Solidity contracts and MetaMask accounts.
+**Ganache:** A local Ethereum blockchain for hosting Solidity contracts and MetaMask accounts.
 [Download Ganache](https://trufflesuite.com/ganache/)
 
-NodeJS: An asynchronous event-driven JavaScript runtime necessary for handling blockchain transactions.
+**NodeJS:** An asynchronous event-driven JavaScript runtime necessary for handling blockchain transactions.
 [Download NodeJS](https://nodejs.org/en)
 
-Web3JS: A library for interacting with Ethereum nodes and deployed contracts using HTTP.
+**Web3JS:** A library for interacting with Ethereum nodes and deployed contracts using HTTP.
 [Web3JS CDN](https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js)
 
-Truffle: A development environment for deploying and testing dApps on the blockchain.
+**Truffle:** A development environment for deploying and testing dApps on the blockchain.
 [Truffle Installation Guide](https://trufflesuite.com/docs/truffle/how-to/install/)
 
-MetaMask: A browser extension for connecting accounts with the blockchain.
+**MetaMask:** A browser extension for connecting accounts with the blockchain.
 [Download MetaMask](https://metamask.io/download/)
 
 ### Installation
@@ -77,18 +77,16 @@ Modify files as needed for your environment:
 
 1. Truffle Configuration: Update 'truffle-config.js' with your Ganache Server details.
  
-    host: "127.0.0.1",
-    port: 7545,
+    - host: "127.0.0.1",
+    - port: 7545,
 
 2. HTML Configuration: Update 'index.html' with the local path to your jquery.min.js file.
 
-    <!-- Node.js -->
-    <script src="./node_modules/jquery/dist/jquery.min.js">
+    - <script src="./node_modules/jquery/dist/jquery.min.js">
 
 3. JavaScript Configuration: Update 'app.js' with the correct path for 'EventRegistration.json'
 
-    // Fetch contract ABI and address, and initialize the contract
-    fetch('./build/contracts/EventRegistration.json')
+    - fetch('./build/contracts/EventRegistration.json')
 
 ### Usage
 
@@ -98,11 +96,11 @@ Modify files as needed for your environment:
 - Submit your Registration information
 - Recall information via 'My Registration Information' button
 
-#### Technologies Used
+### Technologies Used
 
 - Solidity, HTML, CSS, JavaScript
 - Truffle, NodeJS, Web3JS, Ganache
 
-#### Contact Information
+### Contact Information
 
 - ryangessay99@gmail.com
