@@ -8,19 +8,19 @@ These instructions will get the project up and running on your local machine.
 
 ### Prerequisites
 
-**Ganache:** A local Ethereum blockchain for hosting Solidity contracts and MetaMask accounts.
+- **Ganache:** A local Ethereum blockchain for hosting Solidity contracts and MetaMask accounts.
 [Download Ganache](https://trufflesuite.com/ganache/)
 
-**NodeJS:** An asynchronous event-driven JavaScript runtime necessary for handling blockchain transactions.
+- **NodeJS:** An asynchronous event-driven JavaScript runtime necessary for handling blockchain transactions.
 [Download NodeJS](https://nodejs.org/en)
 
-**Web3JS:** A library for interacting with Ethereum nodes and deployed contracts using HTTP.
+- **Web3JS:** A library for interacting with Ethereum nodes and deployed contracts using HTTP.
 [Web3JS CDN](https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js)
 
-**Truffle:** A development environment for deploying and testing dApps on the blockchain.
+- **Truffle:** A development environment for deploying and testing dApps on the blockchain.
 [Truffle Installation Guide](https://trufflesuite.com/docs/truffle/how-to/install/)
 
-**MetaMask:** A browser extension for connecting accounts with the blockchain.
+- **MetaMask:** A browser extension for connecting accounts with the blockchain.
 [Download MetaMask](https://metamask.io/download/)
 
 ### Installation
